@@ -8,6 +8,18 @@
   _paq.push(['setUserId', UserId]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
+
+  _paq.push(['setCustomVariable',
+      // Index, the number from 1 to 5 where this custom variable name is stored
+      1,
+      // Name, the name of the variable, for example: Gender, VisitorType
+      "email",
+      // Value, for example: "Male", "Female" or "new", "engaged", "customer"
+      `${UserId}@qq.com`,
+      // Scope of the custom variable, "visit" means the custom variable applies to the current visit
+      "visit"
+  ]);
+  _paq.push(['trackPageView']);
   (function() {
     var u="https://haozhongbao666.matomo.cloud/";
     _paq.push(['setUserId', UserId]);
