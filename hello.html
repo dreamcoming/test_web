@@ -18,6 +18,9 @@
   </head>
   <body>
     <h1>👋 Hello World!</h1>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
     <button onclick="uploadUserId()">上报</button>
     <a href="./world.html">~(@^_^@)~</a>
     <script>
@@ -26,16 +29,6 @@
         console.log("click uploadUserId");
         const UserId = `${Math.floor(Date.now() / 1000 / 60)}`;
         _paq.push(['setUserId', UserId]);
-        _paq.push(['setCustomVariable',
-    // Index, the number from 1 to 5 where this custom variable name is stored
-    1,
-    // Name, the name of the variable, for example: Gender, VisitorType
-    "Gender",
-    // Value, for example: "Male", "Female" or "new", "engaged", "customer"
-    "Male",
-    // Scope of the custom variable, "visit" means the custom variable applies to the current visit
-    "page"
-]);
         _paq.push(['trackPageView']);
       }
     </script>
