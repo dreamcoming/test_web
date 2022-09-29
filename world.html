@@ -37,9 +37,9 @@
     <script>
       document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
       function uploadUserId() {
+        window.scUserId = window.scUserId || `${Math.floor(Date.now() / 1000 / 60)}`;
         console.log("click uploadUserId");
-        const UserId = `${Math.floor(Date.now() / 1000 / 60)}`;
-        _paq.push(['setUserId', UserId]);
+        _paq.push(['setUserId', window.scUserId]);
         _paq.push(['trackPageView']);
       }
     </script>
